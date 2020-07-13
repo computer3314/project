@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>註冊</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+  <div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+      <div class="col-xl-10 col-lg-12 col-md-9">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-6 d-none d-lg-block">
+      <img src="img/SBL.png" alt="" style="width:550px;height:600px">
+            </div>
+              <div class="col-lg-6">
+                <div class="p-5">
+                  <div class="text-center">
+
+                <h1 class="h4 text-gray-900 mb-4" style="font-size:30px;"><font color="purple">SBL Project Management System</font></h1>
+                  </div>
+                  <form class="user" method="post" action="registered.php" data-toggle="validator">
+                    <div class="form-group">
+                      <input id="inputEmail" name="user_email" class="form-control form-control-user" type="email"  style="ime-mode:active;font-size:20px" placeholder="電子郵件地址" data-error="郵件格式錯誤" required="required">
+                      <div class="help-block with-errors" style="COLOR:red"></div><span id="ts"></span>
+                        </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-user" required id="examplename" style="font-size:20px" name="user_name" aria-describedby="emailHelp" placeholder="名字">
+                      <span id="td"></span>
+                    </div>
+                    <div class="form-group">
+                      <input id="inputPassword" name="user_password" class="form-control form-control-user" style="font-size:20px" type="password" placeholder="設定密碼" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,30}$" data-error="請輸入至少一個大寫和一個小寫字母及數字，至少8個字元。" required="required">
+  <div class="help-block with-errors" style="color:red"></div>
+                    </div>
+
+                    <div class="form-group">
+                      <input id="inputConfirmPassword" name="user_password1" style="font-size:20px" class="form-control form-control-user" type="password" placeholder="確認密碼" data-match="#inputPassword" data-error="密碼未吻合！" required="required">
+  <div class="help-block with-errors" style="color:red"></div>
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox small" style="font-size:20px">
+                        <select name="type">
+                　               <option value="工會">工會</option>
+                　                 <option value="老師">老師</option>
+                                  <option value="老師">主管</option>
+                                   <option value="老師">工程師</option>
+                                    </select>
+
+                      </div>
+                    </div>
+                  <input type="submit" name="button" style="font-size:20px" value="Send" class="btn btn-primary btn-user btn-block">
+
+
+
+                    <hr>
+
+
+                  <hr>
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+          </form>
+    </div>
+
+  </div>
+  <!--引用 Validator-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+
+
+
+  <script type="text/javascript">
+
+  //當滑鼠失去焦點時顯示
+  $("#inputEmail").blur(function(){
+    var formData = new FormData();
+
+        formData.append("u", $("#inputEmail").val());
+        $.ajax({
+        url: 'ajax/login-cl.php',
+          type: 'post',
+          data: formData,
+          processData: false,
+          contentType: false,
+          success: function(data) {
+            if(data=="y")
+    {
+      $("#ts").html("此信箱可以註冊！");
+      $("#ts").css("color","blue");
+
+    }
+    else
+    {
+      $("#ts").html("此信箱已被註冊！");
+      $("#ts").css("color","red");
+
+    }
+          },
+
+        });
+  })
+
+
+
+  //當滑鼠失去焦點時顯示
+  $("#examplename").blur(function(){
+    var formData = new FormData();
+
+        formData.append("a", $("#examplename").val());
+        $.ajax({
+        url: 'ajax/login.php',
+          type: 'post',
+          data: formData,
+          processData: false,
+          contentType: false,
+          success: function(data) {
+            if(data=="y")
+    {
+      $("#td").html("");
+      $("#td").css("color","red");
+    }
+    else
+    {
+      $("#td").html("資料庫中已有此人名！");
+      $("#td").css("color","red");
+
+    }
+          },
+
+        });
+  })
+  </script>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
