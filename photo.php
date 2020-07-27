@@ -15,8 +15,8 @@ $mid = $_GET["mid"];
   <div class="col-6">
     <div class="card bg-warning text-white shadow">
       <div class="card-body">
-      施作元件圖
-      <button class="btn" id="big1">查看</button>
+        施作元件圖
+        <button class="btn" id="big1">查看</button>
         <button class="btn" style="display:none;" id="big2">關閉</button>
       </div>
     </div>
@@ -44,7 +44,7 @@ $mid = $_GET["mid"];
           $sid = $row10['sid'];
         ?>
           <font color=orange><?php echo $sid ?></font>
-          <A class=p1 title="thumbnail image"><img class="d-block w-100" id="img1" src="<?php echo $img; ?> "><IMG class=large title="Beauty" style=" height: 100vh;width: 100%;" src="<?php echo $img; ?> "></A>
+          <A class=p1 title="thumbnail image"><img class="d-block w-100" id="img1" src="<?php echo $img; ?> "></A>
           <input type="text" class="form-control" readonly="readonly" value="<?php echo "$description"; ?>">
           <div align="center"><button type="button" class="btn btn-danger" id="delete8" name="delete8" onclick="form.action='deletefront.php?id=<?php echo "$id"; ?>&mid=<?php echo "$mid"; ?>';form.submit();" />刪除</button><?php if (!$src == NULL) { ?>
               <a href="javascript:void(0)" onclick="window.open('<?php echo "$src" ?>', '', 'width=800,height=800');">查看</a>
@@ -65,7 +65,7 @@ $mid = $_GET["mid"];
       ?>
         <div class="carousel-item" id="ativa">
           <font color=orange><?php echo $sid ?></font>
-          <A class=p1 title="thumbnail image"><img class="d-block w-100" id="img2" src="<?php echo $img; ?>"><IMG class=large title="Beauty" style=" height: 100vh;width: 100%;" src="<?php echo $img; ?> "></A>
+          <A class=p1 title="thumbnail image"><img class="d-block w-100" id="img2" src="<?php echo $img; ?>"></A>
           <input type="text" class="form-control" readonly="readonly" value="<?php echo "$description"; ?>">
           <div align="center"><button type="button" class="btn btn-danger" id="delete8" name="delete8" onclick="form.action='deletefront.php?id=<?php echo "$id"; ?>&mid=<?php echo "$mid"; ?>';form.submit();" />刪除</button><?php if (!$src == NULL) { ?>
               <a href="javascript:void(0)" onclick="window.open('<?php echo "$src" ?>', '', 'width=800,height=800');">查看</a>
@@ -102,7 +102,7 @@ $mid = $_GET["mid"];
           $sid1 = $row9['sid'];
         ?>
           <font color=orange><?php echo $sid1 ?></font>
-          <A class=p1 title="thumbnail image"> <img class="d-block w-100" id="img1" src="<?php echo $img; ?>"><IMG class=large title="Beauty" style=" height: 100vh;width: 100%;" src="<?php echo $img; ?> "></A>
+          <A class=p1 title="thumbnail image"> <img class="d-block w-100" id="img1" src="<?php echo $img; ?>"></A>
           <input type="text" class="form-control" readonly="readonly" value="<?php echo "$description"; ?>">
           <div align="center"><button type="button" class="btn btn-danger" id="delete9" name="delete9" onclick="form.action='deleteback.php?id=<?php echo "$id1"; ?>&mid=<?php echo "$mid"; ?>';form.submit();" />刪除</button> <?php if (!$src1 == NULL) { ?>
               <a href="javascript:void(0)" onclick="window.open('<?php echo "$src1" ?>', '', 'width=800,height=800');">查看</a>
@@ -124,7 +124,7 @@ $mid = $_GET["mid"];
       ?>
         <div class="carousel-item" id="ativa">
           <font color=orange><?php echo $sid1 ?></font>
-          <A class=p1 title="thumbnail image"><img class="d-block w-100" id="img2" src="<?php echo $img; ?>"><IMG class=large title="Beauty" style=" height: 100vh;width: 100%;" src="<?php echo $img; ?> "></A>
+          <A class=p1 title="thumbnail image"><img class="d-block w-100" id="img2" src="<?php echo $img; ?>"></A>
           <input type="text" class="form-control" readonly="readonly" value="<?php echo "$description"; ?>">
           <div align="center"><button type="button" class="btn btn-danger" id="delete9" name="delete9" onclick="form.action='deleteback.php?id=<?php echo "$id1"; ?>&mid=<?php echo "$mid"; ?>';form.submit();" />刪除</button> <?php if (!$src1 == NULL) { ?>
               <a href="javascript:void(0)" onclick="window.open('<?php echo "$src1" ?>', '', 'width=800,height=800');">查看</a>
@@ -151,23 +151,23 @@ $mid = $_GET["mid"];
 </script>
 
 <script>
-          $(document).ready(function() {
-            $("#big2").click(function() {
-              $("#c2,#big1,#big2").toggle();
-            });
-          });
-        </script>
-        <script>
-          $(document).ready(function() {
-            $("#big1").click(function() {
-              $("#c2,#big1").toggle();
-            });
-          });
-        </script>
-        <script>
-          $(document).ready(function() {
-            $("#big1").click(function() {
-              $("#big2").toggle();
-            });
-          });
-        </script>
+  $(document).ready(function() {
+    $("#big2").click(function() {
+      $("#c2,#big1,#big2").toggle();
+    });
+  });
+</script>
+<script>
+  $(document).ready(function() {
+    $("#big1").click(function() {
+      $("#c2,#big1").toggle();
+    });
+  });
+</script>
+<script>
+  $(document).ready(function() {
+    $("#big1").click(function() {
+      $("#big2").toggle();
+    });
+  });
+</script>

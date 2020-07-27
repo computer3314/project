@@ -17,7 +17,7 @@ $row = @mysqli_fetch_assoc($result1);
 $name=$row["user_name"];
 $email1=$row["user_email"];
 $type=$row["user_type"];
-$url="http://210.242.156.181:8246/ABC/Project/forget1.php?check=5&email=$email1";
+$url="http://210.242.156.181:8046/Project/forget1.php?check=5&email=$email1";
 
 if($email==$email1){
   $mail= new PHPMailer();

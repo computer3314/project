@@ -299,6 +299,8 @@ $part4 = ($part) * 5;
               </div>
               <!---進度調整--->
               <div class="col-12" id="callback" style="display:none;">
+              <h3>*此區完成率相加=100%</h3>
+
                 <textarea name="projectname" class="form-control" style="display:none;" required="true" value="" type="text"><?php echo "$name"; ?></textarea>
                 <textarea name="projecttime1" class="form-control" style="display:none;" required="true" value="" type="text"><?php echo "$start"; ?></textarea>
                 <textarea name="projecttime2" class="form-control" style="display:none;" required="true" value="" type="text"><?php echo "$end"; ?></textarea>
@@ -317,7 +319,7 @@ $part4 = ($part) * 5;
                       <td class="sorting_1"> <input name="pe1" class="form-control" required="true" value="<?php echo "$ex1"; ?>" type="text">
                       </td>
                       <td><?php echo date("Y-m-d", strtotime($start . "+$part day")); ?></td>
-                      <td> <input name="f1" placeholder="一" class="form-control" required="true" value="<?php echo "$f1"; ?>" type="text">
+                      <td> <input name="f1" placeholder="一" class="form-control" required="true" value="<?php echo "$f1"; ?>" type="text">/20
                       </td>
                       <td> <input id="dpercent1" placeholder="" class="form-control" name="d1" type="text"><?php echo "$t1"; ?>
                       </td>
@@ -326,7 +328,7 @@ $part4 = ($part) * 5;
                       <td class="sorting_1"> <input name="pe2" class="form-control" required="true" value="<?php echo "$ex2"; ?>" type="text">
                       </td>
                       <td><?php echo date("Y-m-d", strtotime($start . "+$part1 day")); ?></td>
-                      <td> <input name="f2" placeholder="二" class="form-control" required="true" value="<?php echo "$f2"; ?>" type="text">
+                      <td> <input name="f2" placeholder="二" class="form-control" required="true" value="<?php echo "$f2"; ?>" type="text">/20
                       </td>
                       <td> <input id="dpercent2" placeholder="" class="form-control" name="d2" type="text"><?php echo "$t2"; ?>
                       </td>
@@ -335,7 +337,7 @@ $part4 = ($part) * 5;
                       <td class="sorting_1"> <input name="pe3" class="form-control" required="true" value="<?php echo "$ex3"; ?>" type="text">
                       </td>
                       <td><?php echo date("Y-m-d", strtotime($start . "+$part2 day")); ?></td>
-                      <td> <input name="f3" placeholder="三" class="form-control" required="true" value="<?php echo "$f3"; ?>" type="text">
+                      <td> <input name="f3" placeholder="三" class="form-control" required="true" value="<?php echo "$f3"; ?>" type="text">/20
                       </td>
                       <td> <input id="dpercent3" placeholder="" class="form-control" name="d3" type="text"><?php echo "$t3"; ?>
                       </td>
@@ -344,7 +346,7 @@ $part4 = ($part) * 5;
                       <td class="sorting_1"> <input name="pe4" class="form-control" required="true" value="<?php echo "$ex4"; ?>" type="text">
                       </td>
                       <td><?php echo date("Y-m-d", strtotime($start . "+$part3 day")); ?></td>
-                      <td> <input name="f4" placeholder="四" class="form-control" required="true" value="<?php echo "$f4"; ?>" type="text">
+                      <td> <input name="f4" placeholder="四" class="form-control" required="true" value="<?php echo "$f4"; ?>" type="text">/20
                       </td>
                       <td> <input id="dpercent4" placeholder="" class="form-control" name="d4" type="text"><?php echo "$t4"; ?>
                       </td>
@@ -353,7 +355,7 @@ $part4 = ($part) * 5;
                       <td class="sorting_1"> <input name="pe5" class="form-control" required="true" value="<?php echo "$ex5"; ?>" type="text">
                       </td>
                       <td><?php echo "$end"; ?></td>
-                      <td> <input name="f5" placeholder="五" class="form-control" required="true" value="<?php echo "$f5"; ?>" type="text">
+                      <td> <input name="f5" placeholder="五" class="form-control" required="true" value="<?php echo "$f5"; ?>" type="text">/20
                       </td>
                       <td> <input id="dpercent5" placeholder="" class="form-control" name="d5" type="text"><?php echo "$t5"; ?>
                       </td>

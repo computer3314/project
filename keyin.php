@@ -34,10 +34,10 @@ require dirname(__FILE__) . '\silde.php';
                 <input  name="name" class="form-control mb-1" placeholder="姓名" class="form-control" readonly="readonly" required="true" value="<?php echo "$email"; ?>" type="text">
                 <input  name="name" class="form-control mb-1" placeholder="姓名" class="form-control" readonly="readonly" required="true" value="<?php echo "$name"; ?>" type="text">
                 <input  name="type" class="form-control mb-1" placeholder="類型" class="form-control" readonly="readonly" required="true" value="<?php echo "$type"; ?>" type="text">
-                <button type="submit" id="message1" onclick="form.action='accept.php?user_email=<?php echo "$email"; ?>&user_name=<?php echo "$name"; ?>&user_type=<?php echo "$type"; ?>&user_password=<?php echo "$password"; ?>';form.submit();" />核准</button>
+                <button type="submit" id="message1" onclick="form.action='PHPMailer-master/src/sendmail.php?user_email=<?php echo "$email"; ?>&user_name=<?php echo "$name"; ?>&user_type=<?php echo "$type"; ?>&user_password=<?php echo "$password"; ?>';form.submit();" />核准</button>
                 <button type="submit" id="message1" onclick="form.action='deletere.php?user_email=<?php echo "$email"; ?>';form.submit();" />刪除</button>
             <?php  } ?>
-
+         
 
       </form>
 

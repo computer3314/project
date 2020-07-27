@@ -11,7 +11,7 @@ $email=$_GET["user_email"];
 $name=$_GET["user_name"];
 $password=$_GET["user_password"];
 $type=$_GET["type"];
-$url="http://210.242.156.181:8246/ABC/Project/login1.php?email=$email&password=$password&ver=true";
+$url="http://210.242.156.181:8046/Project/login1.php?email=$email&password=$password&ver=true";
 $sql="INSERT INTO `user` (`user_email`, `user_name`, `user_password`, `user_type`) VALUES ('$email', '$name', md5('$password'), '$type')";
 $sql1="DELETE FROM `registered` WHERE `registered`.`user_email` = '$email'";
 

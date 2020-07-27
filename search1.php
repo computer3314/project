@@ -136,15 +136,17 @@ require dirname(__FILE__) . '\silde.php';
                           <a class="btn btn-warning mb-3" href="javascript:void(0)" onclick="window.open('<?php echo "$address1"; ?>', '', '');">後台連結</a>
                           <br>
                         </div>
-                        <div class="col-8" id="upaddress" >
+                        <div class="col-8" id="upaddress">
                           <input name="A1" class="form-control mb-3" required="true" value="<?php echo "$address"; ?>" type="text">
                           <input name="A2" class="form-control mb-3" required="true" value="<?php echo "$address1"; ?>" type="text">
                         </div>
-                        <div class="col-2" id="submitaddress" >
-                          <br>
-                          <button class="btn btn-primary" type="submit" id="address2" name="address2" onclick="form.action='faddresss.php?mid=<?php echo "$s"; ?>';form.submit();" />送出</button>
-                        </div>
+
                       </div>
+                    </div>
+                    <div class="col-12 text-center" id="submitaddress">
+
+                      <button class="btn btn-primary" type="button"><a class="" style="color:white" href="test.php?fid=<?php echo $id ?>&fname=<?php echo $jobname ?>">建立子專案</a></button>
+                      <button class="btn btn-primary" type="submit" id="address2" name="address2" onclick="form.action='faddresss.php?mid=<?php echo "$s"; ?>';form.submit();" />送出</button>
                     </div>
                   </div>
                 </div>
@@ -156,24 +158,24 @@ require dirname(__FILE__) . '\silde.php';
       </div>
     </form>
     <?php if ($_SESSION['type'] !==  '老師') {
-        ?>
-          <div class="col-12 text-center">
-            <a class="btn btn-info" href="test.php?fid=<?php echo $s ?>&fname=<?php echo $name ?>">建立子項目
-              </a>
-              <button type="button" class="btn btn-danger" id="delete" onclick="TheConfirm()" />刪除專案</button>
+    ?>
+      <div class="col-12 text-center">
+        <a class="btn btn-info" href="test.php?fid=<?php echo $s ?>&fname=<?php echo $name ?>">建立子項目
+        </a>
+        <button type="button" class="btn btn-danger" id="delete" onclick="TheConfirm()" />刪除專案</button>
 
-          </div>
+      </div>
 
-        <?php }
-        ?>
+    <?php }
+    ?>
   </div>
 </div>
 <a class="scroll-to-top rounded" href="#page-top">
   <i class="fas fa-angle-up"></i>
 </a>
 <script>
-  function TheConfirm(){
-    top.location.href="deleteproject.php?mid=<?php echo $s ?>";
+  function TheConfirm() {
+    top.location.href = "deleteproject.php?mid=<?php echo $s ?>";
   }
   $(document).ready(function() {
     $("#upaddressbtn").click(function() {

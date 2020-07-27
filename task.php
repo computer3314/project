@@ -135,7 +135,7 @@ require dirname(__FILE__) . '\silde.php';
               $result1 = mysqli_query($db, $sql1);
               while ($row1 = mysqli_fetch_assoc($result1)) {
                 $name = $row1['name'];
-                $sql11 = "SELECT * FROM process where project='$name' and state='以核可'";
+                $sql11 = "SELECT * FROM process where project='$name' and state='已核可'";
 
                 $res11 = mysqli_query($db, $sql11);
                 $num11 = mysqli_num_rows($res11);
@@ -167,7 +167,7 @@ require dirname(__FILE__) . '\silde.php';
                       } ?>
                       </div>
                       <div class="col-8">
-                        <?php echo "$row11[thing]"; ?>
+                        <font class="text-primary">敘述：</font><?php echo "$row11[thing]"; ?>
                       </div>
                       <div class="col-2">
                       <?php if (!$file == NULL) { ?><a href="javascript:void(0)" class="btn btn-primary" onclick="window.open('<?php echo "$file" ?>', '', 'width=800,height=800');">查看檔案</a> <?php  } ?>
